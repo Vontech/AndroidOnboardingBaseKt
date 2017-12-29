@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- Registration screen colors -->
+    <color name="registration_background">#FFFFFF</color>
+    <!--color name="registration_background">#4A5467</color-->
+    <!--color name="registration_background">#C68080</color-->
+    <!--color name="registration_background">#80C69C</color-->
+
+        <!-- Colors if using white background -->
+    <color name="registration_title_color">#000000</color>
+    <color name="registration_edit_text_background">#ECEBEB</color>
+    <color name="registration_edit_text_color">#BBBBBB</color>
+    <color name="registration_button_text_color">#D8D8D8</color>
+    <color name="registration_button_background_color">#000000</color>
+
+        <!-- Colors if using colored background >
+    <color name="registration_title_color">#FFFFFF</color>
+    <color name="registration_edit_text_background">#32000000</color>
+    <color name="registration_edit_text_color">#64FFFFFF</color>
+    <color name="registration_button_text_color">#FFFFFF</color>
+    <color name="registration_button_background_color">#80000000</color-->
+
+</resources>

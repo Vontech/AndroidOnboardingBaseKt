@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Rollout</string>
+
+    <!-- Universal strings -->
+    <string name="unknown_server_error">An unknown error occurred; please truy again later.</string>
+
+    <!-- Registration screen strings -->
+    <string name="registration_title">REGISTER</string>
+    <string name="registration_name_label">NAME</string>
+    <string name="registration_name_hint">john appleseed</string>
+    <string name="registration_email_label">EMAIL</string>
+    <string name="registration_email_hint">you@mail.com</string>
+    <string name="registration_phone_label">PHONE NUMBER</string>
+    <string name="registration_phone_hint">(860) 938-7131</string>
+    <string name="registration_password_label">PASSWORD</string>
+    <string name="registration_password_hint">password</string>
+    <string name="registration_button">REGISTER</string>
+
+    <string name="registration_name_error">Please enter a valid name.</string>
+    <string name="registration_email_error">Please enter a valid email.</string>
+    <string name="registration_phone_error">Please enter a valid phone number.</string>
+    <string name="registration_password_error">Password must be at least 8 characters long.</string>
+
+</resources>

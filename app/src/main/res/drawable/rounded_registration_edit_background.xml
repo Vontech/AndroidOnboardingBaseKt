@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  res/drawable/rounded_edittext.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" android:padding="10dp">
+    <solid android:color="@color/registration_edit_text_background"/>
+    <corners
+        android:bottomRightRadius="@dimen/registration_edit_rounded_radius"
+        android:bottomLeftRadius="@dimen/registration_edit_rounded_radius"
+        android:topLeftRadius="@dimen/registration_edit_rounded_radius"
+        android:topRightRadius="@dimen/registration_edit_rounded_radius"/>
+</shape>
