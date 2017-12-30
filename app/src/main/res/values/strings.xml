@@ -2,9 +2,10 @@
     <string name="app_name">Rollout</string>
 
     <!-- Universal strings -->
-    <string name="unknown_server_error">An unknown error occurred; please truy again later.</string>
+    <string name="unknown_server_error">An unknown error occurred; please try again later.</string>
+    <string name="dialog_ok">OK</string>
 
-    <!-- Registration screen strings -->
+    <!-- Registration/Login screen strings -->
     <string name="registration_title">REGISTER</string>
     <string name="registration_name_label">NAME</string>
     <string name="registration_name_hint">john appleseed</string>
@@ -15,10 +16,24 @@
     <string name="registration_password_label">PASSWORD</string>
     <string name="registration_password_hint">password</string>
     <string name="registration_button">REGISTER</string>
+    <string name="registration_from_login">Go back to login</string>
 
     <string name="registration_name_error">Please enter a valid name.</string>
     <string name="registration_email_error">Please enter a valid email.</string>
     <string name="registration_phone_error">Please enter a valid phone number.</string>
     <string name="registration_password_error">Password must be at least 8 characters long.</string>
+    <string name="registration_error_title">Account Error</string>
+    <string name="registration_login_error">Account was created, but login failed; please try logging in.</string>
+
+    <string name="login_error_title">Login Failed</string>
+    <string name="login_error_content">Either username or password is incorrect.</string>
+
+    <string name="login_title">LOGIN</string>
+    <string name="login_email_label">EMAIL</string>
+    <string name="login_email_hint">you@mail.com</string>
+    <string name="login_password_label">PASSWORD</string>
+    <string name="login_password_hint">password</string>
+    <string name="login_button">LOGIN</string>
+    <string name="login_go_to_registration">Don\'t have an account? Sign up!</string>
 
 </resources>

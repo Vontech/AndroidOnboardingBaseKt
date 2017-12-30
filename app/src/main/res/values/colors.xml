@@ -10,6 +10,8 @@
     <!--color name="registration_background">#C68080</color-->
     <!--color name="registration_background">#80C69C</color-->
 
+    <color name="registration_error_dialog_top">#c62828</color> <!-- red 800 -->
+
         <!-- Colors if using white background -->
     <color name="registration_title_color">#000000</color>
     <color name="registration_edit_text_background">#ECEBEB</color>

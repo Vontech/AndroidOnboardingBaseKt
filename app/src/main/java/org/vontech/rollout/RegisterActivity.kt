@@ -1,8 +1,11 @@
 package org.vontech.rollout
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import android.view.View
+import com.yarolegovich.lovelydialog.LovelyInfoDialog
+import com.yarolegovich.lovelydialog.LovelyStandardDialog
 import kotlinx.android.synthetic.main.activity_register.*
 import java.util.regex.Pattern
 
@@ -16,11 +19,16 @@ class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // TODO: Before setting the content view, check if this user is registered
-
         setContentView(R.layout.activity_register)
 
-        // Now register listeners
+        // Show the "Back to Login" button if from login
+        if (!intent.extras.getBoolean("fromLogin", false)) {
+            goto_login_button.visibility = View.GONE
+        }
+
+        goto_login_button.setOnClickListener {
+            this.finish()
+        }
 
         register_button.setOnClickListener {
             registerUser()
@@ -72,10 +80,54 @@ class RegisterActivity : AppCompatActivity() {
         // If no error was encountered, start the user creation process
         RolloutAPI.registerUser(name, email, phone, password, {error ->
 
-            Log.v("Back in main", error.toString())
+            if (error == null) {
 
+                // Registration was successful; attempt login
+                login(email, password)
+
+            } else {
+                LovelyInfoDialog(this)
+                        .setTopColorRes(R.color.registration_error_dialog_top)
+                        .setIcon(R.drawable.ic_error_outline_white_36dp)
+                        .setTitle(R.string.registration_error_title)
+                        .setMessage(error)
+                        .setConfirmButtonText(R.string.dialog_ok)
+                        .show()
+            }
         })
 
+    }
+
+    /**
+     * Attempts to login the user after registration occurs
+     * @param email The email to login with
+     * @param password The password for this email
+     */
+    private fun login(email: String, password: String) {
+
+        RolloutAPI.authenticateUser(email, password, {error ->
+
+            if (error == null) {
+
+                // Login successful; start main activity
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+                this.finish()
+
+            } else {
+                LovelyStandardDialog(this)
+                        .setTopColorRes(R.color.registration_error_dialog_top)
+                        .setIcon(R.drawable.ic_error_outline_white_36dp)
+                        .setTitle(R.string.registration_error_title)
+                        .setMessage(R.string.registration_login_error)
+                        .setPositiveButton(R.string.dialog_ok, {
+                            val intent = Intent(this, LoginActivity::class.java)
+                            startActivity(intent)
+                            this.finish()
+                        })
+                        .show()
+            }
+        })
 
     }
 

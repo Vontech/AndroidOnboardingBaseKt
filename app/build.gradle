@@ -24,7 +24,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     testImplementation 'junit:junit:4.12'
@@ -36,5 +36,6 @@ dependencies {
     compile 'de.hdodenhof:circleimageview:2.2.0'                // For the rounded profile pictures
     compile 'com.github.kittinunf.fuel:fuel:1.12.0'             // HTTP requests library
     compile 'com.github.kittinunf.fuel:fuel-android:1.12.0'     // " " for Android support
+    compile 'com.yarolegovich:lovely-dialog:1.0.7'              // Switching it up in the dialog dep
 
 }

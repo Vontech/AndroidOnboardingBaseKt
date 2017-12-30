@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
     android:background="@color/registration_background"
-    tools:context="org.vontech.rollout.RegisterActivity">
+    tools:context="org.vontech.rollout.LoginActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,18 +20,18 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/registration_title"
+                android:id="@+id/login_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="1"
                 android:fontFamily="@font/lato_black"
-                android:text="@string/registration_title"
+                android:text="@string/login_title"
                 android:textColor="@color/registration_title_color"
                 android:textSize="@dimen/title_text_size" />
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/registration_profile_image"
+                android:id="@+id/login_profile_image"
                 android:layout_width="@dimen/registration_profile_size"
                 android:layout_height="@dimen/registration_profile_size"
                 android:src="@color/registration_edit_text_background" />
@@ -37,7 +39,7 @@
         </LinearLayout>
 
         <FrameLayout
-            android:id="@+id/registration_spacer"
+            android:id="@+id/login_spacer"
             android:layout_width="match_parent"
             android:layout_height="24dp"
             android:layout_weight="1">
@@ -45,51 +47,24 @@
         </FrameLayout>
 
         <TextView
-            android:id="@+id/registration_name_label"
+            android:id="@+id/login_email_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
             android:fontFamily="@font/lato_black"
-            android:text="@string/registration_name_label"
+            android:text="@string/login_email_label"
             android:textColor="@color/registration_title_color"
             android:textSize="@dimen/registration_text_sizes" />
 
         <EditText
-            android:id="@+id/registration_name_edit"
+            android:id="@+id/login_email_edit"
             android:layout_width="match_parent"
             android:layout_height="@dimen/registration_edit_height"
             android:layout_marginBottom="@dimen/registration_edit_spacer"
             android:background="@drawable/rounded_registration_edit_background"
             android:ems="10"
             android:fontFamily="@font/lato_black"
-            android:hint="@string/registration_name_hint"
-            android:inputType="text|textCapWords|textPersonName"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingStart="16dp"
-            android:textColor="@color/registration_edit_text_color"
-            android:textColorHint="@color/registration_edit_text_color"
-            android:textSize="@dimen/registration_text_sizes" />
-
-        <TextView
-            android:id="@+id/registration_email_label"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:fontFamily="@font/lato_black"
-            android:text="@string/registration_email_label"
-            android:textColor="@color/registration_title_color"
-            android:textSize="@dimen/registration_text_sizes" />
-
-        <EditText
-            android:id="@+id/registration_email_edit"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/registration_edit_height"
-            android:layout_marginBottom="@dimen/registration_edit_spacer"
-            android:background="@drawable/rounded_registration_edit_background"
-            android:ems="10"
-            android:fontFamily="@font/lato_black"
-            android:hint="@string/registration_email_hint"
+            android:hint="@string/login_email_hint"
             android:inputType="textEmailAddress"
             android:paddingStart="16dp"
             android:paddingLeft="16dp"
@@ -99,51 +74,24 @@
             android:textSize="@dimen/registration_text_sizes" />
 
         <TextView
-            android:id="@+id/registration_phone_label"
+            android:id="@+id/login_password_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
             android:fontFamily="@font/lato_black"
-            android:text="@string/registration_phone_label"
+            android:text="@string/login_password_label"
             android:textColor="@color/registration_title_color"
             android:textSize="@dimen/registration_text_sizes" />
 
         <EditText
-            android:id="@+id/registration_phone_edit"
+            android:id="@+id/login_password_edit"
             android:layout_width="match_parent"
             android:layout_height="@dimen/registration_edit_height"
             android:layout_marginBottom="@dimen/registration_edit_spacer"
             android:background="@drawable/rounded_registration_edit_background"
             android:ems="10"
             android:fontFamily="@font/lato_black"
-            android:hint="@string/registration_phone_hint"
-            android:inputType="phone"
-            android:paddingStart="16dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:textColorHint="@color/registration_edit_text_color"
-            android:textColor="@color/registration_edit_text_color"
-            android:textSize="@dimen/registration_text_sizes" />
-
-        <TextView
-            android:id="@+id/registration_password_label"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:fontFamily="@font/lato_black"
-            android:text="@string/registration_password_label"
-            android:textColor="@color/registration_title_color"
-            android:textSize="@dimen/registration_text_sizes" />
-
-        <EditText
-            android:id="@+id/registration_password_edit"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/registration_edit_height"
-            android:layout_marginBottom="@dimen/registration_edit_spacer"
-            android:background="@drawable/rounded_registration_edit_background"
-            android:ems="10"
-            android:fontFamily="@font/lato_black"
-            android:hint="@string/registration_password_hint"
+            android:hint="@string/login_password_hint"
             android:inputType="textPassword"
             android:paddingStart="16dp"
             android:paddingLeft="16dp"
@@ -153,14 +101,16 @@
             android:textSize="@dimen/registration_text_sizes" />
 
         <TextView
-            android:id="@+id/goto_login_button"
+            android:id="@+id/register_login_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/lato"
-            android:text="@string/registration_from_login"
+            android:text="@string/login_go_to_registration"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="@dimen/registration_text_sizes" />
+
+        <!-- TODO: Put a 'Forgot Password' button here -->
 
         <FrameLayout
             android:id="@+id/button_spacer"
@@ -170,7 +120,7 @@
         </FrameLayout>
 
         <TextView
-            android:id="@+id/register_button"
+            android:id="@+id/login_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -180,7 +130,7 @@
             android:paddingLeft="100dp"
             android:paddingRight="100dp"
             android:paddingTop="22dp"
-            android:text="@string/registration_button"
+            android:text="@string/login_button"
             android:textColor="@color/registration_button_text_color"
             android:textSize="@dimen/registration_text_sizes" />
 
