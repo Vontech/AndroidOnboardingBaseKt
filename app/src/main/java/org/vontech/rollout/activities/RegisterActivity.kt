@@ -1,4 +1,4 @@
-package org.vontech.rollout
+package org.vontech.rollout.activities
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
@@ -7,6 +7,8 @@ import android.view.View
 import com.yarolegovich.lovelydialog.LovelyInfoDialog
 import com.yarolegovich.lovelydialog.LovelyStandardDialog
 import kotlinx.android.synthetic.main.activity_register.*
+import org.vontech.rollout.R
+import org.vontech.rollout.RolloutAPI
 import java.util.regex.Pattern
 
 /**
@@ -78,7 +80,7 @@ class RegisterActivity : AppCompatActivity() {
         }
 
         // If no error was encountered, start the user creation process
-        RolloutAPI.registerUser(name, email, phone, password, {error ->
+        RolloutAPI.registerUser(name, email, phone, password, { error ->
 
             if (error == null) {
 
@@ -105,7 +107,7 @@ class RegisterActivity : AppCompatActivity() {
      */
     private fun login(email: String, password: String) {
 
-        RolloutAPI.authenticateUser(email, password, {error ->
+        RolloutAPI.authenticateUser(email, password, { error ->
 
             if (error == null) {
 

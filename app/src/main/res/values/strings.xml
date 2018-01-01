@@ -16,7 +16,7 @@
     <string name="registration_password_label">PASSWORD</string>
     <string name="registration_password_hint">password</string>
     <string name="registration_button">REGISTER</string>
-    <string name="registration_from_login">Go back to login</string>
+    <string name="registration_from_login">Back to login</string>
 
     <string name="registration_name_error">Please enter a valid name.</string>
     <string name="registration_email_error">Please enter a valid email.</string>
@@ -35,5 +35,32 @@
     <string name="login_password_hint">password</string>
     <string name="login_button">LOGIN</string>
     <string name="login_go_to_registration">Don\'t have an account? Sign up!</string>
+    <string name="login_forgot_button">Forgot password?</string>
+
+    <!-- Forgot password -->
+    <string name="forgot_title">FORGOT PASSWORD</string>
+    <string name="forgot_content">Enter your email below to receive a one-time link to reset your password.</string>
+    <string name="forgot_edit_label">EXISTING EMAIL</string>
+    <string name="forgot_edit_hint">you@mail.com</string>
+    <string name="forgot_edit_submit">SUBMIT</string>
+
+    <string name="forgot_sorry">Sorry, no account exists with the given email.</string>
+    <string name="forgot_check_title">CHECK EMAIL</string>
+    <string name="forgot_check_content">We sent you an email with a link to reset your password. Note that this link will expire in 30 minutes.</string>
+    <string name="forgot_wait_button">BACK TO LOGIN</string>
+
+    <string name="forgot_reset_title">RESET PASSWORD</string>
+    <string name="forgot_reset_content">Create a new password below. Your password must be at least 8 characters.</string>
+    <string name="forgot_reset_edit_label">NEW PASSWORD</string>
+    <string name="forgot_reset_edit_hint">new password</string>
+    <string name="forgot_reset_confirm_button">CONFIRM RESET</string>
+
+    <string name="forgot_reset_success">Your password has been successfully reset!</string>
+    <string name="forgot_proceed_success">Continue to Rollout</string>
+
+    <string name="forgot_password_error_title">Password Reset Failed</string>
+    <string name="forgot_reset_error">There was an error resetting your password; please try again later.</string>
+
+    <string name="forgot_back">Back to login</string>
 
 </resources>

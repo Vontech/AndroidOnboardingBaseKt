@@ -1,9 +1,9 @@
-package org.vontech.rollout
+package org.vontech.rollout.activities
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import org.vontech.rollout.*
 
 /**
  * The main map-like activity of the Rollout application

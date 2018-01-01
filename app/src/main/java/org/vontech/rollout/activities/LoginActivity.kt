@@ -1,10 +1,12 @@
-package org.vontech.rollout
+package org.vontech.rollout.activities
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.yarolegovich.lovelydialog.LovelyInfoDialog
 import kotlinx.android.synthetic.main.activity_login.*
+import org.vontech.rollout.R
+import org.vontech.rollout.RolloutAPI
 
 /**
  * Activity for logging into the Rollout service
@@ -27,6 +29,10 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        login_forgot_button.setOnClickListener {
+            forgotPassword()
+        }
+
     }
 
     /**
@@ -36,7 +42,7 @@ class LoginActivity : AppCompatActivity() {
      */
     private fun login(email: String, password: String) {
 
-        RolloutAPI.authenticateUser(email, password, {error ->
+        RolloutAPI.authenticateUser(email, password, { error ->
 
             if (error == null) {
 
@@ -59,10 +65,13 @@ class LoginActivity : AppCompatActivity() {
     }
 
     /**
-     * TODO: Implement a function which starts a forgot password process
+     * Starts the forgot password flow.
      */
     private fun forgotPassword() {
-        throw RuntimeException("Forgot password is not yet implemented")
+
+        val intent = Intent(this, ForgotPasswordActivity::class.java)
+        startActivity(intent)
+
     }
 
 }
