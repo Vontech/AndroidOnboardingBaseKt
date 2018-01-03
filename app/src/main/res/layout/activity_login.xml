@@ -107,7 +107,7 @@
             android:fontFamily="@font/lato"
             android:text="@string/login_go_to_registration"
             android:textAlignment="center"
-            android:textColor="@android:color/black"
+            android:textColor="@color/registration_title_color"
             android:textSize="@dimen/registration_text_sizes" />
 
         <TextView
@@ -118,7 +118,7 @@
             android:fontFamily="@font/lato"
             android:text="@string/login_forgot_button"
             android:textAlignment="center"
-            android:textColor="@android:color/black"
+            android:textColor="@color/registration_title_color"
             android:textSize="@dimen/registration_text_sizes" />
 
         <!-- TODO: Put a 'Forgot Password' button here -->

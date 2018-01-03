@@ -15,4 +15,10 @@
     <dimen name="registration_button_width">200dp</dimen>
     <dimen name="registration_button_radius">48dp</dimen>
 
+    <!-- Suggestion values -->
+    <dimen name="suggestions_handle_height">64dp</dimen>
+    <dimen name="suggestions_handle_side_margins">0dp</dimen>
+    <dimen name="suggestions_handle_border_radius">12dp</dimen>
+    <dimen name="suggestions_handle_text_size">14sp</dimen>
+
 </resources>

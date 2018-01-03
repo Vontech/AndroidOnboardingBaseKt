@@ -1,0 +1,12 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" >
+
+    <solid android:color="@color/suggestion_panel_background" />
+
+    <corners
+        android:bottomLeftRadius="0dp"
+        android:bottomRightRadius="0dp"
+        android:topLeftRadius="@dimen/suggestions_handle_border_radius"
+        android:topRightRadius="@dimen/suggestions_handle_border_radius" />
+
+</shape>

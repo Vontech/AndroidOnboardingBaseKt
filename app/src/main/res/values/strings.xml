@@ -63,4 +63,7 @@
 
     <string name="forgot_back">Back to login</string>
 
+    <!-- Suggestion Panel -->
+    <string name="suggestion_handle">Pull up for suggestions</string>
+
 </resources>

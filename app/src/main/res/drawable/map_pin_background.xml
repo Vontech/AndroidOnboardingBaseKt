@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="128dp"
+    android:viewportWidth="108"
+    android:viewportHeight="128">
+
+    <group
+        android:translateX="-283.000000"
+        android:translateY="-497.000000">
+        <group
+            android:translateX="289.000000"
+            android:translateY="148.000000">
+            <group
+                android:translateY="351.000000">
+                <path
+                    android:fillColor="#000000"
+                    android:strokeWidth="1"
+                    android:pathData="M96,48.5383492 C96,62.1437956 88.6153846,76.4846715 69.0461538,95.9735542
+L48,117.301011 L26.5846154,95.9735542 C7.38461538,76.1169568 0,61.7760809
+0,48.5383492 C-0.000000000000013117712,21.6951713 21.4153846,0 48,0 C74.5846154,0
+96,21.6951713 96,48.5383492 Z" />
+                <path
+                    android:fillColor="#4A5467"
+                    android:fillType="evenOdd"
+                    android:strokeWidth="1"
+                    android:pathData="M96,48.5383492 C96,62.1437956 88.6153846,76.4846715 69.0461538,95.9735542
+L48,117.301011 L26.5846154,95.9735542 C7.38461538,76.1169568 0,61.7760809
+0,48.5383492 C-0.000000000000013117712,21.6951713 21.4153846,0 48,0 C74.5846154,0
+96,21.6951713 96,48.5383492 Z" />
+                <path
+                    android:fillColor="#4A5467"
+                    android:fillType="evenOdd"
+                    android:strokeWidth="1"
+                    android:pathData="M96,48.5383492 C96,62.1437956 88.6153846,76.4846715 69.0461538,95.9735542
+L48,117.301011 L26.5846154,95.9735542 C7.38461538,76.1169568 0,61.7760809
+0,48.5383492 C-0.000000000000013117712,21.6951713 21.4153846,0 48,0 C74.5846154,0
+96,21.6951713 96,48.5383492 Z" />
+                <path
+                    android:fillColor="#000000"
+                    android:fillAlpha="0.199784873"
+                    android:fillType="evenOdd"
+                    android:strokeAlpha="0.199784873"
+                    android:strokeWidth="1"
+                    android:pathData="M 48 14.6423358 C 66.3895895094 14.6423358 81.2972973 29.4888349165 81.2972973 47.8029197 C 81.2972973 66.1170044835 66.3895895094 80.9635036 48 80.9635036 C 29.6104104906 80.9635036 14.7027027 66.1170044835 14.7027027 47.8029197 C 14.7027027 29.4888349165 29.6104104906 14.6423358 48 14.6423358 Z" />
+            </group>
+        </group>
+    </group>
+</vector>
