@@ -66,4 +66,21 @@
     <!-- Suggestion Panel -->
     <string name="suggestion_handle">Pull up for suggestions</string>
 
+    <!-- Voting Screen -->
+    <string name="voting_title">CHOOSE LOCATION</string>
+    <string name="voting_option_bar">BAR</string>
+    <string name="voting_option_book">BOOK STORE</string>
+    <string name="voting_option_cafe">CAFE</string>
+    <string name="voting_option_library">LIBRARY</string>
+    <string name="voting_option_club">NIGHT CLUB</string>
+    <string name="voting_option_park">PARK</string>
+    <string name="voting_option_restaurant">RESTAURANT</string>
+    <string name="voting_option_school">SCHOOL</string>
+    <string name="voting_option_mall">SHOPPING MALL</string>
+    <string name="voting_option_university">UNIVERSITY</string>
+
+    <!-- Group creation screen -->
+    <string name="group_favorite_label">Favorites</string>
+    <string name="group_contact_label">Contacts</string>
+
 </resources>

@@ -2,7 +2,6 @@ package org.vontech.rollout.activities
 
 import android.Manifest
 import android.annotation.SuppressLint
-import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Color
 import android.location.Location
@@ -21,6 +20,8 @@ import com.google.maps.android.ui.IconGenerator
 import org.vontech.rollout.R
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.MarkerOptions
+import kotlinx.android.synthetic.main.activity_main.*
+import org.jetbrains.anko.*
 
 /**
  * The main map-like activity of the Rollout application
@@ -54,6 +55,10 @@ class MainActivity : FragmentActivity(), OnMapReadyCallback {
         // Check permissions
         checkLocationPermissions()
 
+        suggestion_drawer_handle.setOnClickListener {
+            startActivity<CreateGroupActivity>()
+        }
+
     }
 
     private fun decideWhereToGo() {
@@ -63,8 +68,7 @@ class MainActivity : FragmentActivity(), OnMapReadyCallback {
 
         // First, if never opened, or logged out, automatically go to the login screen
         if (!prefs.appAccessed || !auth.isAccessTokenAvailable()) {
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
+            startActivity<LoginActivity>()
             this.finish()
 
         // Otherwise, start a process to check if the
@@ -73,8 +77,7 @@ class MainActivity : FragmentActivity(), OnMapReadyCallback {
             RolloutAPI.validateUser { valid ->
                 //Log.e("DECIDER [ACCESS-VALID]", valid.toString())
                 if (!valid) {
-                    val intent = Intent(this, LoginActivity::class.java)
-                    startActivity(intent)
+                    startActivity<LoginActivity>()
                     this.finish()
                 }
             }

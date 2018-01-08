@@ -13,13 +13,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key"/>
+            android:value="@string/google_maps_key" />
 
-        <activity android:name=".activities.RegisterActivity"></activity>
-        <activity android:name=".activities.LoginActivity"></activity>
+        <activity android:name=".activities.RegisterActivity" />
+        <activity android:name=".activities.LoginActivity" />
         <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,7 +31,9 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".activities.ForgotPasswordActivity"></activity>
+        <activity android:name=".activities.ForgotPasswordActivity" />
+        <activity android:name=".activities.VotingActivity" />
+        <activity android:name=".activities.CreateGroupActivity"></activity>
     </application>
 
 </manifest>

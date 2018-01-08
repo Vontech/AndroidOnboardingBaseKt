@@ -1,12 +1,12 @@
 package org.vontech.rollout.activities
 
-import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.yarolegovich.lovelydialog.LovelyInfoDialog
 import kotlinx.android.synthetic.main.activity_login.*
 import org.vontech.rollout.R
 import org.vontech.rollout.RolloutAPI
+import org.jetbrains.anko.*
 
 /**
  * Activity for logging into the Rollout service
@@ -24,9 +24,8 @@ class LoginActivity : AppCompatActivity() {
         }
 
         register_login_button.setOnClickListener {
-            val intent = Intent(this, RegisterActivity::class.java)
-            intent.putExtra("fromLogin", true)
-            startActivity(intent)
+            startActivity<RegisterActivity>("fromLogin" to true)
+            this.finish()
         }
 
         login_forgot_button.setOnClickListener {
@@ -47,8 +46,7 @@ class LoginActivity : AppCompatActivity() {
             if (error == null) {
 
                 // Login successful; start main activity
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
+                startActivity<MainActivity>()
                 this.finish()
 
             } else {
@@ -69,8 +67,7 @@ class LoginActivity : AppCompatActivity() {
      */
     private fun forgotPassword() {
 
-        val intent = Intent(this, ForgotPasswordActivity::class.java)
-        startActivity(intent)
+        startActivity<ForgotPasswordActivity>()
 
     }
 

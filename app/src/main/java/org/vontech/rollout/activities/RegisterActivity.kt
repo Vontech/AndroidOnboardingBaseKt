@@ -10,6 +10,7 @@ import kotlinx.android.synthetic.main.activity_register.*
 import org.vontech.rollout.R
 import org.vontech.rollout.RolloutAPI
 import java.util.regex.Pattern
+import org.jetbrains.anko.*
 
 /**
  * The registration activity for making a user account on the Rollout platform.
@@ -112,8 +113,7 @@ class RegisterActivity : AppCompatActivity() {
             if (error == null) {
 
                 // Login successful; start main activity
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
+                startActivity<MainActivity>()
                 this.finish()
 
             } else {
@@ -123,8 +123,7 @@ class RegisterActivity : AppCompatActivity() {
                         .setTitle(R.string.registration_error_title)
                         .setMessage(R.string.registration_login_error)
                         .setPositiveButton(R.string.dialog_ok, {
-                            val intent = Intent(this, LoginActivity::class.java)
-                            startActivity(intent)
+                            startActivity<LoginActivity>()
                             this.finish()
                         })
                         .show()

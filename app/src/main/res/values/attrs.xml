@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RoundedImageView">
+        <attr name="topLeftSquare" format="boolean" />
+        <attr name="topRightSquare" format="boolean" />
+        <attr name="bottomLeftSquare" format="boolean" />
+        <attr name="bottomRightSquare" format="boolean" />
+        <attr name="cornerRadius" format="integer" />
+    </declare-styleable>
+</resources>

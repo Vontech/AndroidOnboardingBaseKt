@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/voting_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/registration_background"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/internal_screen_side_padding"
+    android:paddingRight="@dimen/internal_screen_side_padding"
+    android:paddingTop="@dimen/internal_screen_top_padding"
+    tools:context="org.vontech.rollout.activities.VotingActivity">
+
+    <TextView
+        android:id="@+id/voting_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/lato_black"
+        android:text="@string/voting_title"
+        android:textColor="@color/internal_title_dark_theme"
+        android:textSize="@dimen/title_text_size" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/bar_option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/voting_unselected_color"
+                android:textSize="@dimen/voting_item_text_size"
+                android:fontFamily="@font/lato_black"
+                android:paddingBottom="@dimen/voting_item_spacer"
+                android:text="@string/voting_option_bar" />
+
+            <TextView
+                android:id="@+id/book_option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/voting_unselected_color"
+                android:textSize="@dimen/voting_item_text_size"
+                android:fontFamily="@font/lato_black"
+                android:paddingBottom="@dimen/voting_item_spacer"
+                android:text="@string/voting_option_book" />
+
+            <TextView
+                android:id="@+id/cafe_option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/voting_unselected_color"
+                android:textSize="@dimen/voting_item_text_size"
+                android:fontFamily="@font/lato_black"
+                android:paddingBottom="@dimen/voting_item_spacer"
+                android:text="@string/voting_option_cafe" />
+
+            <TextView
+                android:id="@+id/library_option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/voting_unselected_color"
+                android:textSize="@dimen/voting_item_text_size"
+                android:fontFamily="@font/lato_black"
+                android:paddingBottom="@dimen/voting_item_spacer"
+                android:text="@string/voting_option_library" />
+
+            <TextView
+                android:id="@+id/club_option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/voting_unselected_color"
+                android:textSize="@dimen/voting_item_text_size"
+                android:fontFamily="@font/lato_black"
+                android:paddingBottom="@dimen/voting_item_spacer"
+                android:text="@string/voting_option_club" />
+
+            <TextView
+                android:id="@+id/park_option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/voting_unselected_color"
+                android:textSize="@dimen/voting_item_text_size"
+                android:fontFamily="@font/lato_black"
+                android:paddingBottom="@dimen/voting_item_spacer"
+                android:text="@string/voting_option_park" />
+
+            <TextView
+                android:id="@+id/restaurant_option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/voting_unselected_color"
+                android:textSize="@dimen/voting_item_text_size"
+                android:fontFamily="@font/lato_black"
+                android:paddingBottom="@dimen/voting_item_spacer"
+                android:text="@string/voting_option_restaurant" />
+
+            <TextView
+                android:id="@+id/school_option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/voting_unselected_color"
+                android:textSize="@dimen/voting_item_text_size"
+                android:fontFamily="@font/lato_black"
+                android:paddingBottom="@dimen/voting_item_spacer"
+                android:text="@string/voting_option_school" />
+
+            <TextView
+                android:id="@+id/mall_option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/voting_unselected_color"
+                android:textSize="@dimen/voting_item_text_size"
+                android:fontFamily="@font/lato_black"
+                android:paddingBottom="@dimen/voting_item_spacer"
+                android:text="@string/voting_option_mall" />
+
+            <TextView
+                android:id="@+id/university_option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/voting_unselected_color"
+                android:textSize="@dimen/voting_item_text_size"
+                android:fontFamily="@font/lato_black"
+                android:paddingBottom="@dimen/voting_item_spacer"
+                android:text="@string/voting_option_university" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

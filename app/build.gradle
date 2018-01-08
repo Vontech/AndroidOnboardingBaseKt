@@ -27,6 +27,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
@@ -41,5 +42,17 @@ dependencies {
     compile 'com.google.android.gms:play-services-maps:11.8.0'  // Google maps implementation
     compile 'com.google.maps.android:android-maps-utils:0.5'   // For advanced map features
     compile 'com.google.android.gms:play-services-location:11.8.0' // Location functionality
+    compile 'net.codecrafted:lineartimepicker:1.0.0'            // Experimental time chooser
+    compile 'com.shawnlin:number-picker:2.4.4'                  // Number Picker for times
+    compile "org.jetbrains.anko:anko-commons:0.10.4"            // Awesome helper functions
+    compile 'com.squareup.picasso:picasso:2.5.2'                // Awesome image loading
+
+    // Anko Layouts
+    compile "org.jetbrains.anko:anko-sdk25:0.10.4" // sdk15, sdk19, sdk21, sdk23 are also available
+    compile "org.jetbrains.anko:anko-appcompat-v7:0.10.4"
+
+    // Coroutine listeners for Anko Layouts
+    compile "org.jetbrains.anko:anko-sdk25-coroutines:0.10.4"
+    compile "org.jetbrains.anko:anko-appcompat-v7-coroutines:0.10.4"
 
 }

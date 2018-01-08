@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/registration_background"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/group_creation_padding"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/friend_entry_optional_letter_label"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/lato_black"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="A"
+        android:textSize="@dimen/group_creation_optional_text_size" />
+
+    <RelativeLayout
+        android:id="@+id/friend_entry_image_holder"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/group_creation_profile">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/friend_entry_profile_image"
+            android:layout_width="@dimen/group_creation_profile"
+            android:layout_height="@dimen/group_creation_profile"
+            android:src="@mipmap/ic_launcher" />
+
+        <ImageView
+            android:id="@+id/friend_entry_online_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/friend_entry_profile_image"
+            android:layout_alignRight="@id/friend_entry_profile_image"
+            android:src="@drawable/online_indicator" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/friend_entry_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_black"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="Aaron Vontell"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/group_creation_name_text_size" />
+
+</LinearLayout>

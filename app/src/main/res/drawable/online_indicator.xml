@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <solid
+        android:color="#6FF3BA"/>
+
+    <size
+        android:width="@dimen/group_creation_online_indicator"
+        android:height="@dimen/group_creation_online_indicator"/>
+</shape>
