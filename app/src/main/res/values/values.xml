@@ -32,6 +32,7 @@
     <dimen name="group_creation_padding">16dp</dimen>
     <dimen name="group_creation_online_indicator">16dp</dimen>
     <dimen name="group_creation_name_text_size">16sp</dimen>
+    <dimen name="group_creation_section_size">12sp</dimen>
     <dimen name="group_creation_optional_text_size">32sp</dimen>
 
 </resources>

@@ -80,7 +80,12 @@
     <string name="voting_option_university">UNIVERSITY</string>
 
     <!-- Group creation screen -->
+    <string name="group_creation_title">CREATE GROUP</string>
     <string name="group_favorite_label">Favorites</string>
     <string name="group_contact_label">Contacts</string>
+    <string name="group_add_person">ADD PEOPLE</string>
+    <string name="group_creation_favorites">FAVORITES</string>
+    <string name="group_creation_groups">GROUPS</string>
+    <string name="group_creation_contacts">CONTACTS</string>
 
 </resources>

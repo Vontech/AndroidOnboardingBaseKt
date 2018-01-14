@@ -1,17 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/registration_background"
     tools:context="org.vontech.rollout.activities.CreateGroupActivity">
+
+    <TextView
+        android:id="@+id/create_group_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/lato_black"
+        android:text="@string/group_creation_title"
+        android:textColor="@color/registration_title_color"
+        android:textSize="@dimen/title_text_size" />
+
+    <EditText
+        android:id="@+id/add_person_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:fontFamily="@font/lato_black"
+        android:hint="@string/group_add_person"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textColorHint="@color/group_creation_edit_text" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/added_people_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:background="@color/registration_background"
+        android:orientation="horizontal"
+        android:scrollbars="none" >
+
+    </android.support.v7.widget.RecyclerView>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/create_group_recycler"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/registration_background"
-        android:scrollbars="vertical"/>
+        android:scrollbars="vertical">
+
+    </android.support.v7.widget.RecyclerView>
 
 </LinearLayout>

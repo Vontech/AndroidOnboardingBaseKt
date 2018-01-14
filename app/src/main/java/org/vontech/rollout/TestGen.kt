@@ -1,6 +1,7 @@
 package org.vontech.rollout
 
 import org.vontech.rollout.domain.FriendEntry
+import org.vontech.rollout.domain.GroupEntry
 import java.util.*
 
 /**
@@ -29,6 +30,19 @@ class TestGen() {
                         generateName() + " " + generateName(),
                         "(843) 932-8457",
                         generateName() + "@fake.com"))
+            }
+
+            return results
+        }
+
+        fun getTestGroupEntries() : ArrayList<GroupEntry> {
+
+            var results = arrayListOf<GroupEntry>()
+            for (i in 0..3) {
+                results.add(
+                        GroupEntry(
+                                "https://picsum.photos/500/?random",
+                                generateName()))
             }
 
             return results

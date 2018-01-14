@@ -39,7 +39,9 @@
 
     <!-- Group creation colors -->
     <color name="group_creation_label_text">#FFFFFF</color>
+    <color name="group_creation_edit_text">#7fffffff</color>
     <color name="group_creation_label_background">#1f000000</color>
     <color name="group_creation_optional_label">#33000000</color>
+    <color name="group_creation_section_label_text">#4Dffffff</color>
 
 </resources>

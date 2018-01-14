@@ -46,6 +46,8 @@ dependencies {
     compile 'com.shawnlin:number-picker:2.4.4'                  // Number Picker for times
     compile "org.jetbrains.anko:anko-commons:0.10.4"            // Awesome helper functions
     compile 'com.squareup.picasso:picasso:2.5.2'                // Awesome image loading
+    compile 'io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.1.3'
+                                                                // Multiple recyclerviews at once
 
     // Anko Layouts
     compile "org.jetbrains.anko:anko-sdk25:0.10.4" // sdk15, sdk19, sdk21, sdk23 are also available
