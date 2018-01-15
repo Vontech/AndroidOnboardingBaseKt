@@ -34,7 +34,9 @@
         android:hint="@string/group_add_person"
         android:inputType="textPersonName"
         android:text=""
-        android:textColorHint="@color/group_creation_edit_text" />
+        android:textColorHint="@color/group_creation_edit_text"
+        android:textColor="@color/group_creation_edit_text"
+        android:textSize="20sp" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/added_people_recycler"

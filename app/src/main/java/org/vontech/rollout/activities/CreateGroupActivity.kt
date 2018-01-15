@@ -1,7 +1,11 @@
 package org.vontech.rollout.activities
 
+import android.Manifest
+import android.content.pm.PackageManager
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v4.app.ActivityCompat
+import android.support.v4.content.ContextCompat
 import android.support.v7.widget.LinearLayoutManager
 import android.text.Editable
 import android.text.TextWatcher
@@ -13,6 +17,7 @@ import org.vontech.rollout.domain.FriendEntry
 import org.vontech.rollout.domain.GroupEntry
 import org.vontech.rollout.domain.SortedListCallback
 import org.vontech.rollout.interfaces.SimpleNamedOrder
+import org.vontech.rollout.utils.ContactsHelper
 import org.vontech.rollout.views.FriendEntriesSection
 import org.vontech.rollout.views.GroupEntriesSection
 
@@ -31,6 +36,9 @@ class CreateGroupActivity : AppCompatActivity() {
     private lateinit var friendsList: List<FriendEntry>
     private lateinit var groupsSection : GroupEntriesSection
     private lateinit var groupsList: List<GroupEntry>
+
+    private val CONTACT_PERMISSION_CODE = 231
+    private var contactsGranted : Boolean = false
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,10 +65,11 @@ class CreateGroupActivity : AppCompatActivity() {
         create_group_recycler.adapter = adapter
 
         attachAddPersonListeners()
+        checkContactPermissions()
 
     }
 
-    fun attachAddPersonListeners() {
+    private fun attachAddPersonListeners() {
 
         add_person_edit.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(p0: Editable?) {
@@ -76,7 +85,7 @@ class CreateGroupActivity : AppCompatActivity() {
 
     }
 
-    fun filterFriendsList(newString: String) {
+    private fun filterFriendsList(newString: String) {
 
         val lowerCaseQuery = newString.toLowerCase()
         val filteredFriends = ArrayList<FriendEntry>()
@@ -93,7 +102,7 @@ class CreateGroupActivity : AppCompatActivity() {
 
     }
 
-    fun filterGroupsList(newString: String) {
+    private fun filterGroupsList(newString: String) {
 
         val lowerCaseQuery = newString.toLowerCase()
         val filteredGroups = ArrayList<GroupEntry>()
@@ -105,6 +114,38 @@ class CreateGroupActivity : AppCompatActivity() {
         }
         groupsSection.replaceAll(filteredGroups)
         create_group_recycler.scrollToPosition(0)
+
+    }
+
+    private fun checkContactPermissions() {
+
+        var contactsPermissionResult = ContextCompat
+                .checkSelfPermission(this, Manifest.permission.READ_CONTACTS)
+
+        if (contactsPermissionResult == PackageManager.PERMISSION_GRANTED) {
+            contactsGranted = true
+            // TODO: Get list of contacts that are not yet friends
+            ContactsHelper(contactsGranted, this).getAllContacts()
+        } else {
+            ActivityCompat.requestPermissions(this,
+                    arrayOf(Manifest.permission.READ_CONTACTS),
+                    CONTACT_PERMISSION_CODE)
+        }
+
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int,
+                                            permissions: Array<String>, grantResults: IntArray) {
+        when (requestCode) {
+            CONTACT_PERMISSION_CODE -> {
+                contactsGranted =
+                        !(grantResults.isEmpty() || grantResults[0] != PackageManager.PERMISSION_GRANTED)
+                // TODO: Get list of contacts that are not yet friends
+                ContactsHelper(contactsGranted, this).getAllContacts()
+            }
+        }
+
+        // TODO: If contacts still not granted, provide button that begins the process of granting
 
     }
 

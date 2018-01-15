@@ -43,5 +43,6 @@
     <color name="group_creation_label_background">#1f000000</color>
     <color name="group_creation_optional_label">#33000000</color>
     <color name="group_creation_section_label_text">#4Dffffff</color>
+    <color name="group_creation_chip_background">#26000000</color>
 
 </resources>

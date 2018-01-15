@@ -34,5 +34,8 @@
     <dimen name="group_creation_name_text_size">16sp</dimen>
     <dimen name="group_creation_section_size">12sp</dimen>
     <dimen name="group_creation_optional_text_size">32sp</dimen>
+    <dimen name="group_creation_chip_height">32dp</dimen>
+    <dimen name="group_creation_chip_height_half">16dp</dimen>
+    <dimen name="group_creation_chip_text_size">12sp</dimen>
 
 </resources>
